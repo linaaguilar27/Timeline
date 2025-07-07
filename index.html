@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FSC Revision Sidebar</title>
+  <style>
+    body {
+      font-family: 'DM Sans', 'Avenir Next', sans-serif;
+      color: #285C4D;
+      padding: 20px;
+    }
+    .section {
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+    .toggle {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .toggle:hover {
+      transform: scale(1.03);
+    }
+    .toggle img {
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+    }
+    .toggle h4 {
+      font-size: 20px;
+      margin: 0;
+      font-weight: bold;
+    }
+    .content {
+      display: none;
+      padding-left: 42px;
+      margin-top: 5px;
+    }
+    .content ul {
+      list-style: disc;
+      padding-left: 20px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <div class="toggle" onclick="toggleContent(0)">
+      <img src="https://i.imgur.com/KMCiDxv.png" alt="Icon">
+      <h4>Revision Overview</h4>
+    </div>
+    <div class="content">
+      <ul>
+        <li>Normative documents</li>
+        <li>Review report</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="toggle" onclick="toggleContent(1)">
+      <img src="https://i.imgur.com/gLPi9KU.png" alt="Icon">
+      <h4>Discussion Papers</h4>
+    </div>
+    <div class="content">
+      <ul>
+        <li>Green papers</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="toggle" onclick="toggleContent(2)">
+      <img src="https://i.imgur.com/A3GdqN2.png" alt="Icon">
+      <h4>Revision Recommendations</h4>
+    </div>
+    <div class="content">
+      <ul>
+        <li>Summary report (key topics)</li>
+        <li>Background report</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="toggle" onclick="toggleContent(3)">
+      <img src="https://i.imgur.com/cPRRlKf.png" alt="Icon">
+      <h4>Presentation Materials</h4>
+    </div>
+    <div class="content">
+      <ul>
+        <li>Webinar Environmental Aspects</li>
+        <li>Webinar Social Aspects</li>
+        <li>Webinar Launching the PCI Revision</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function toggleContent(index) {
+      const all = document.querySelectorAll('.content');
+      all.forEach((el, i) => {
+        el.style.display = (i === index && el.style.display !== 'block') ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
