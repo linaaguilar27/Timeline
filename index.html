@@ -1,75 +1,93 @@
-<style>
-  body {
-    color: #285C4D;
-    font-family: 'Greycliff CF', sans-serif;
-    line-height: 1.75;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Accordion Timeline</title>
+  <style>
+    body {
+      color: #285C4D;
+      font-family: 'Greycliff CF', sans-serif;
+      line-height: 1.75;
+    }
 
-  a {
-    color: #285C4D;
-    text-decoration: none;
-  }
+    a {
+      color: #285C4D;
+      text-decoration: none;
+    }
 
-  a:visited {
-    color: #285C4D;
-  }
+    a:visited {
+      color: #285C4D;
+    }
 
-  .accordion {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-  }
+    .accordion {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+    }
 
-  .accordion .step {
-    font-family: 'Greycliff CF Extra', sans-serif;
-    font-size: 20px;
-    cursor: pointer;
-    padding: 10px 15px;
-    position: relative;
-    background-color: #f5f9ed;
-    border-left: 5px solid #78BE20;
-  }
+    .accordion .step {
+      font-family: 'Greycliff CF Extra', sans-serif;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 10px 15px;
+      position: relative;
+      background-color: #f5f9ed;
+      border-left: 5px solid #78BE20;
+    }
 
-  .accordion .step:hover {
-    background-color: #e2f1d4;
-  }
+    .accordion .step:hover {
+      background-color: #e2f1d4;
+    }
 
-  .accordion .items {
-    display: none;
-    padding: 15px 20px;
-    margin-left: 0;
-    text-align: justify;
-    background-color: #fff;
-    border-left: 5px solid #d9e7cb;
-    box-shadow: 0 0 6px rgba(0,0,0,0.05);
-  }
+    .step .arrow {
+      float: right;
+      transition: transform 0.3s ease;
+      font-size: 16px;
+      margin-top: 2px;
+    }
 
-  .accordion.active .items {
-    display: block;
-  }
+    .accordion.active .step .arrow {
+      transform: rotate(180deg);
+    }
 
-  .section-title {
-    font-family: 'Greycliff CF Extra', sans-serif;
-    font-weight: bold;
-    margin-top: 10px;
-  }
+    .accordion .items {
+      display: none;
+      padding: 15px 20px;
+      margin-left: 0;
+      text-align: justify;
+      background-color: #fff;
+      border-left: 5px solid #d9e7cb;
+      box-shadow: 0 0 6px rgba(0,0,0,0.05);
+    }
 
-  .section-content {
-    line-height: 26px;
-  }
+    .accordion.active .items {
+      display: block;
+    }
 
-  ul {
-    margin-bottom: 1rem;
-    padding-left: 20px;
-  }
+    .section-title {
+      font-family: 'Greycliff CF Extra', sans-serif;
+      font-weight: bold;
+      margin-top: 10px;
+    }
 
-  p {
-    margin-bottom: 1rem;
-  }
-</style>
+    .section-content {
+      line-height: 26px;
+    }
+
+    ul {
+      margin-bottom: 1rem;
+      padding-left: 20px;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
 
 <!-- TIMELINE ACCORDIONS -->
 <div class="accordion">
-  <div class="step">June 2025</div>
+  <div class="step">June 2025 <span class="arrow">&#9662;</span></div>
   <div class="items">
     <div class="section-content">
       <p>The Joint Review Report of FSC Principles and Criteria, International Generic Indicators, and other Forest Management normative documents is published. Click <strong><a href="https://connect.fsc.org/media/jointreviewreportpciandotherfmnormativedocumentspdf" target="_blank">here</a></strong> to read the report.</p>
@@ -78,7 +96,7 @@
 </div>
 
 <div class="accordion">
-  <div class="step">April – July 2025</div>
+  <div class="step">April – July 2025 <span class="arrow">&#9662;</span></div>
   <div class="items">
     <div class="section-title">Key topic webinars for FSC Principles, Criteria, and Indicators revision</div>
     <div class="section-content">
@@ -107,7 +125,7 @@
 </div>
 
 <div class="accordion">
-  <div class="step">December 2024</div>
+  <div class="step">December 2024 <span class="arrow">&#9662;</span></div>
   <div class="items">
     <div class="section-content">
       <p><strong>Webinars on the P&amp;C and IGI Revision Process</strong></p>
@@ -126,7 +144,7 @@
 </div>
 
 <div class="accordion">
-  <div class="step">October 2024</div>
+  <div class="step">October 2024 <span class="arrow">&#9662;</span></div>
   <div class="items">
     <div class="section-content">
       <p>29 October: Kick off the process.</p>
@@ -138,9 +156,14 @@
   const acc = document.querySelectorAll('.accordion');
   acc.forEach(section => {
     section.querySelector('.step').addEventListener('click', () => {
-      acc.forEach(s => s.classList.remove('active')); // close others
-      section.classList.add('active'); // open clicked
+      acc.forEach(s => {
+        if (s !== section) s.classList.remove('active');
+      });
+      section.classList.toggle('active');
     });
   });
 </script>
+
+</body>
+</html>
 
