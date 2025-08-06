@@ -1,132 +1,146 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Table of Contents</title>
-  <style>
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background-color: #f5f9ed;
-      color: #285C4D;
-      padding: 40px;
-    }
+<style>
+  body {
+    color: #285C4D;
+    font-family: 'Greycliff CF', sans-serif;
+    line-height: 1.75;
+  }
 
-    .section-wrapper {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
+  a {
+    color: #285C4D;
+    text-decoration: none;
+  }
 
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
+  a:visited {
+    color: #285C4D;
+  }
 
-    .dropdown-toggle {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background-color: transparent;
-      border: none;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      padding: 10px;
-      color: #285C4D;
-      transition: transform 0.2s ease;
-    }
+  .accordion {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+  }
 
-    .dropdown-toggle:hover {
-      transform: scale(1.05);
-    }
+  .accordion .step {
+    font-family: 'Greycliff CF Extra', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 15px;
+    position: relative;
+    background-color: #f5f9ed;
+    border-left: 5px solid #78BE20;
+  }
 
-    .dropdown-toggle img {
-      width: 28px;
-      height: 28px;
-      background-color: #78BE20;
-      border-radius: 50%;
-      padding: 4px;
-    }
+  .accordion .step:hover {
+    background-color: #e2f1d4;
+  }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: white;
-      min-width: 220px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 10px;
-      z-index: 10;
-      border-radius: 6px;
-    }
+  .accordion .items {
+    display: none;
+    padding: 15px 20px;
+    margin-left: 0;
+    text-align: justify;
+    background-color: #fff;
+    border-left: 5px solid #d9e7cb;
+    box-shadow: 0 0 6px rgba(0,0,0,0.05);
+  }
 
-    .dropdown-content a {
-      display: block;
-      text-decoration: none;
-      color: #285C4D;
-      padding: 6px 0;
-      font-size: 14px;
-    }
+  .accordion.active .items {
+    display: block;
+  }
 
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-  </style>
-</head>
-<body>
+  .section-title {
+    font-family: 'Greycliff CF Extra', sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+  }
 
-  <h2 style="text-align: center;">Content</h2>
+  .section-content {
+    line-height: 26px;
+  }
 
-  <div class="section-wrapper">
-    
-    <div class="dropdown">
-      <button class="dropdown-toggle">
-        <img src="https://i.imgur.com/KMCiDxv.png" alt="Icon">
-        Revision Overview
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Normative documents</a>
-        <a href="#">Review report</a>
-      </div>
+  ul {
+    margin-bottom: 1rem;
+    padding-left: 20px;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+</style>
+
+<!-- TIMELINE ACCORDIONS -->
+<div class="accordion">
+  <div class="step">June 2025</div>
+  <div class="items">
+    <div class="section-content">
+      <p>The Joint Review Report of FSC Principles and Criteria, International Generic Indicators, and other Forest Management normative documents is published. Click <strong><a href="https://connect.fsc.org/media/jointreviewreportpciandotherfmnormativedocumentspdf" target="_blank">here</a></strong> to read the report.</p>
     </div>
-
-    <div class="dropdown">
-      <button class="dropdown-toggle">
-        <img src="https://i.imgur.com/gLPi9KU.png" alt="Icon">
-        Discussion Papers
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Green papers</a>
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <button class="dropdown-toggle">
-        <img src="https://i.imgur.com/A3GdqN2.png" alt="Icon">
-        Revision Recommendations
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Summary report (key topics)</a>
-        <a href="#">Background report</a>
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <button class="dropdown-toggle">
-        <img src="https://i.imgur.com/cPRRlKf.png" alt="Icon">
-        Presentation Materials
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Webinar Environmental Aspects</a>
-        <a href="#">Webinar Social Aspects</a>
-        <a href="#">Webinar Launching the PCI Revision</a>
-      </div>
-    </div>
-
   </div>
+</div>
 
-</body>
-</html>
+<div class="accordion">
+  <div class="step">April – July 2025</div>
+  <div class="items">
+    <div class="section-title">Key topic webinars for FSC Principles, Criteria, and Indicators revision</div>
+    <div class="section-content">
+      <p><strong>Social Aspects (30 April 2025)</strong></p>
+      <ul>
+        <li>09:00 – 10:30 CEST, English only</li>
+        <li>16:00 – 17:30 CEST, with Spanish & French translation</li>
+      </ul>
+      <p>Presentation: <a href="https://connect.fsc.org/media/fsc-introduction-pc-and-igisocialwebinar2025pdf" target="_blank">English</a> | Q&A: <a href="https://connect.fsc.org/media/fsc-introduction-pc-and-igisocialwebinar2025qapdf" target="_blank">here</a></p>
+
+      <p><strong>Climate Change and Biodiversity (25 June 2025)</strong></p>
+      <ul>
+        <li>09:00 – 10:30 CEST, English only</li>
+        <li>16:00 – 17:30 CEST, with Spanish & French translation</li>
+      </ul>
+      <p>Presentation: <a href="https://connect.fsc.org/media/pci-revisionwebinarclimate-changebiodiversity2025pdf" target="_blank">English</a></p>
+
+      <p><strong>Outcome Orientation (9 July 2025)</strong></p>
+      <ul>
+        <li>09:00 – 10:30 CEST, English only</li>
+        <li>16:00 – 17:30 CEST, with Spanish & French translation</li>
+      </ul>
+      <p>Presentation: <a href="https://connect.fsc.org/media/pci-revisionwebinaroutcome-orientation2025pdf" target="_blank">English</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="accordion">
+  <div class="step">December 2024</div>
+  <div class="items">
+    <div class="section-content">
+      <p><strong>Webinars on the P&amp;C and IGI Revision Process</strong></p>
+      <p>FSC hosted two webinars to introduce its members to the joint revision process of the FSC Principles &amp; Criteria (P&amp;C) and the International Generic Indicators (IGI).</p>
+      <p>Presentation: 
+        <a href="https://connect.fsc.org/media/webinar06122024enpdf-0" target="_blank">English</a> | 
+        <a href="https://connect.fsc.org/es/media/webinar06122024sppdf" target="_blank">Spanish</a> | 
+        <a href="https://connect.fsc.org/fr/media/webinar06122024frpdf" target="_blank">French</a>
+      </p>
+      <ul>
+        <li>Dec 6, 09:00–10:30 CET</li>
+        <li>Dec 6, 16:30–18:00 CET (with translation)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="accordion">
+  <div class="step">October 2024</div>
+  <div class="items">
+    <div class="section-content">
+      <p>29 October: Kick off the process.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const acc = document.querySelectorAll('.accordion');
+  acc.forEach(section => {
+    section.querySelector('.step').addEventListener('click', () => {
+      acc.forEach(s => s.classList.remove('active')); // close others
+      section.classList.add('active'); // open clicked
+    });
+  });
+</script>
 
