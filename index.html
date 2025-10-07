@@ -189,6 +189,21 @@
   accordions.forEach((accordion) => {
     const step = accordion.querySelector('.step');
 
-    step.addEventListener('click', ()
+    step.addEventListener('click', () => {
+      // Close all other accordions
+      accordions.forEach((acc) => {
+        if (acc !== accordion) {
+          acc.classList.remove('active');
+        }
+      });
+
+      // Toggle the clicked one
+      accordion.classList.toggle('active');
+    });
+  });
+</script>
+
+</body>
+</html>
 
 
