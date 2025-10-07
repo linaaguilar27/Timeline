@@ -44,17 +44,16 @@
       font-size: 24px;
       transition: transform 0.3s ease;
       display: inline-block;
-      transform: rotate(90deg); /* default: points down */
+      transform: rotate(90deg);
     }
 
     .accordion.active .step .arrow {
-      transform: rotate(-90deg); /* active: points up */
+      transform: rotate(-90deg);
     }
 
     .accordion .items {
       display: none;
       padding: 15px 20px;
-      margin-left: 0;
       text-align: justify;
       background-color: #fff;
       border-left: 5px solid #d9e7cb;
@@ -87,7 +86,7 @@
 </head>
 <body>
 
-<!-- NEW SECTION: Public Consultation Oct–Nov 2025 -->
+<!-- NEW SECTION -->
 <div class="accordion">
   <div class="step">October 1 – November 30, 2025 <span class="arrow">&#8250;</span></div>
   <div class="items">
@@ -115,7 +114,8 @@
   </div>
 </div>
 
-<!-- EXISTING SECTIONS -->
+<!-- EXISTING ACCORDION SECTIONS -->
+
 <div class="accordion">
   <div class="step">June 2025 <span class="arrow">&#8250;</span></div>
   <div class="items">
@@ -182,9 +182,11 @@
   </div>
 </div>
 
-<!-- Accordion script -->
+<!-- SCRIPT FOR ACCORDION -->
 <script>
-  const acc = document.querySelectorAll('.accordion');
-  acc.forEach(section
+  const accordions = document.querySelectorAll('.accordion');
+
+  accordions.forEach(accordion => {
+    const step = accordion.query
 
 
