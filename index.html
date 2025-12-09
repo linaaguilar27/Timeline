@@ -1,169 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>PCI Revision Timeline</title>
+  <meta charset="UTF-8">
+  <title>Accordion Timeline</title>
+  <style>
+    body {
+      color: #285C4D;
+      font-family: 'Greycliff CF', sans-serif;
+      line-height: 1.75;
+    }
 
-<style>
- body {
-    color: #285C4D;
-    font-family: 'Greycliff CF', sans-serif;
-    line-height: 1.75;
-  }
+    a {
+      color: #285C4D;
+      text-decoration: underline;
+      font-weight: bold;
+    }
 
-  a {
-    color: #285C4D;
-    text-decoration: underline;
-    font-weight: bold;
-  }
+    a:visited {
+      color: #285C4D;
+    }
 
-  a:visited {
-    color: #285C4D;
-  }
+    .accordion {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+    }
 
-  .accordion {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-  }
+    /* ✅ FIX: SOLO agrega espacio extra debajo del PRIMER acordeón */
+    .accordion:first-of-type {
+      margin-bottom: 40px !important;
+    }
 
-  /* ✅ FIX: give the FIRST accordion the same spacing as the rest */
-  .accordion:first-of-type {
-    margin-bottom: 20px;
-  }
+    .accordion .step {
+      font-family: 'Greycliff CF Extra', sans-serif;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 10px 15px;
+      position: relative;
+      background-color: #f5f9ed;
+      border-left: 5px solid #78BE20;
+    }
 
-  .accordion .step {
-    font-family: 'Greycliff CF Extra', sans-serif;
-    font-size: 20px;
-    cursor: pointer;
-    padding: 12px 18px;
-    background-color: #f5f9ed;
-    border-left: 5px solid #78BE20;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+    .accordion .step:hover {
+      background-color: #e2f1d4;
+    }
 
-  .accordion .step:hover {
-    background-color: #e2f1d4;
-  }
+    .step .arrow {
+      float: right;
+      font-size: 24px;
+      transition: transform 0.3s ease;
+      display: inline-block;
+      transform: rotate(90deg);
+    }
 
-  .step .arrow {
-    font-size: 26px;
-    transition: transform 0.3s ease;
-  }
+    .accordion.active .step .arrow {
+      transform: rotate(-90deg);
+    }
 
-  .accordion.active .step .arrow {
-    transform: rotate(90deg);
-  }
+    .accordion .items {
+      display: none;
+      padding: 15px 20px;
+      text-align: justify;
+      background-color: #fff;
+      border-left: 5px solid #d9e7cb;
+      box-shadow: 0 0 6px rgba(0,0,0,0.05);
+    }
 
-  .accordion .items {
-    display: none;
-    padding: 0 20px;
-    background-color: #fff;
-    border-left: 5px solid #d9e7cb;
-    box-shadow: 0 0 6px rgba(0,0,0,0.05);
-    text-align: justify;
-  }
+    .accordion.active .items {
+      display: block;
+    }
 
-  .accordion.active .items {
-    display: block;
-    padding: 15px 20px;
-  }
+    .section-title {
+      font-family: 'Greycliff CF Extra', sans-serif;
+      font-weight: bold;
+      margin-top: 10px;
+    }
 
-  .section-title {
-    font-weight: bold;
-    margin-top: 10px;
-  }
+    .section-content {
+      line-height: 26px;
+    }
 
-  .section-content {
-    line-height: 26px;
-  }
+    ul {
+      margin-bottom: 1rem;
+      padding-left: 20px;
+    }
 
-  ul {
-    margin-bottom: 1rem;
-    padding-left: 20px;
-  }
-
-  p {
-    margin-bottom: 1rem;
-  }
-</style>
+    p {
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
-
 <body>
 
-<h1>PCI Revision Timeline</h1>
+<!-- Working Group Section -->
+<div class="accordion">
+  <div class="step">15 October - 30 November 2025 <span class="arrow">&#8250;</span></div>
+  <div class="items">
+    <div class="section-title">Call for Working Group and Consultative Forums to revise FSC’s Principles, Criteria and Indicators</div>
+    <div class="section-content">
+      <p>Between 15 October and 30 November 2025, FSC invited interested candidates to apply to join the Working Group and the Consultative Forums responsible for revising the Principles and Criteria, the International Generic Indicators, and other Forest Management documents.</p>
+      <p>During this period, FSC also published the <a href="https://connect.fsc.org/media/drafttorrevisionpci" target="_blank">Draft Terms of Reference</a>, which outlined the scope of work and composition of the Working Group. The Working Group held decision-making responsibilities and was supported by experts, liaisons, a facilitator, a youth representative, FSC staff, and the Consultative Forums.</p>
+    </div>
+  </div>
+</div>
 
-<!-- ============= 1. OCT–NOV 2025 (Merged) ================== -->
+<!-- Public Consultation Section -->
 <div class="accordion">
   <div class="step">October 1 – December 31, 2025 <span class="arrow">&#8250;</span></div>
   <div class="items">
-
     <div class="section-title">Public Consultations on PCI Revision</div>
-    <p>The consultation is open from <strong>01 October</strong> to <strong>31 December 2025</strong>.</p>
+    <div class="section-content">
+      <p>FSC launches consultations on the revision of its Principles and Criteria, International Generic Indicators, and other forest management normative documents (collectively referred to as PCI). The consultation is open from <strong>01 October 2025</strong> until <strong>31 December 2025</strong>.</p>
+      <p>Consultation is available in 
+        <a href="https://consultation-platform.fsc.org/en/consultations/take/cba255184e6e13" target="_blank">English</a>, 
+        <a href="https://consultation-platform.fsc.org/es/consultations/take/cba255184e6e13" target="_blank">Spanish</a>, and 
+        <a href="https://consultation-platform.fsc.org/en/consultations/take/cf1d5990bdf24" target="_blank">French</a> on the FSC Consultation Platform. Please see the 
+        <a href="https://connect.fsc.org/current-processes/joint-revision-fsc-principles-and-criteria-international-generic-indicators-and" target="_blank">Consultation Content</a>, 
+        <a href="https://connect.fsc.org/media/2-pci-consultation-overviewenpdf" target="_blank">Consultation Overview</a>, and 
+        <a href="https://connect.fsc.org/media/readmepdf-0" target="_blank">Consultation Guideline</a> for further details.
+      </p>
 
-    <p>Available in 
-      <a href="#">English</a>, 
-      <a href="#">Spanish</a>, 
-      <a href="#">French</a>.
-    </p>
+      <div class="section-title">Webinars</div>
+      <p>To facilitate participation in the public consultation, FSC held webinars in English with simultaneous translation into Spanish and French. These webinars provided an overview of the consultation process and addressed questions and comments from participants.</p>
 
-    <div class="section-title">Webinars</div>
-    <p><strong>Overview of Forest Management Consultations (14 Oct 2025)</strong></p>
+      <p><strong>Overview of Forest Management Consultations (14 October 2025)</strong></p>
+      <ul>
+        <li><strong>Morning:</strong> 09:00 – 10:30 CEST, in English only.</li>
+        <li><strong>Afternoon:</strong> 16:00 – 17:30 CEST (with simultaneous translation into Spanish and French).</li>
+      </ul>
+      <p>The webinar presentation is available in <a href="https://connect.fsc.org/media/overviewfmconsultationpdf" target="_blank">English</a>. You can also access the Q&A document from the session <a href="https://connect.fsc.org/media/overviewfmconsultationswebinar14102025qareportpdf" target="_blank">here</a>.</p>
 
-    <ul>
-      <li>09:00–10:30 CEST (English)</li>
-      <li>16:00–17:30 CEST (Spanish & French)</li>
-    </ul>
-
-    <div class="section-title">Call for Working Group and Consultative Forums</div>
-    <p>Applications open 15 October – 30 November 2025.</p>
-
+      <p><strong>PCI Consultation Webinar (20 November 2025)</strong></p>
+      <ul>
+        <li><strong>Morning:</strong> 09:00 – 10:30 CEST, in English only.</li>
+        <li><strong>Afternoon:</strong> 16:00 – 17:30 CEST (with simultaneous translation into Spanish and French).</li>
+      </ul>
+      <p>The webinar presentation is available in English.</p>
+    </div>
   </div>
 </div>
 
-<!-- ============= 2. JUNE 2025 ================== -->
+<!-- June 2025 -->
 <div class="accordion">
   <div class="step">June 2025 <span class="arrow">&#8250;</span></div>
   <div class="items">
-    <p>The Joint Review Report is published.</p>
+    <div class="section-content">
+      <p>The Joint Review Report of FSC Principles and Criteria, International Generic Indicators and other Forest Management normative documents is published. <a href="https://connect.fsc.org/media/jointreviewreportpciandotherfmnormativedocumentspdf" target="_blank">Click here</a> to read the report.</p>
+    </div>
   </div>
 </div>
 
-<!-- ============= 3. APR–JUL 2025 ================== -->
+<!-- April – July 2025 -->
 <div class="accordion">
   <div class="step">April – July 2025 <span class="arrow">&#8250;</span></div>
   <div class="items">
-    <div class="section-title">Key Topic Webinars</div>
-    <p><strong>Social Aspects (30 April)</strong></p>
-    <p><strong>Climate Change & Biodiversity (25 June)</strong></p>
-    <p><strong>Outcome Orientation (9 July)</strong></p>
+    <div class="section-title">Key topic webinars for FSC Principles, Criteria, and Indicators revision</div>
+    <div class="section-content">
+      <p><strong>Social Aspects (30 April 2025)</strong></p>
+      <ul>
+        <li>09:00 – 10:30 CEST, in <a href="https://connect.fsc.org/media/fsc-introduction-pc-and-igisocialwebinar2025pdf" target="_blank">English</a> only</li>
+        <li>16:00 – 17:30 CEST, with Spanish & French translation</li>
+      </ul>
+      <p>You can also access the Q&A document from the session <a href="https://connect.fsc.org/media/fsc-introduction-pc-and-igisocialwebinar2025qapdf" target="_blank">here</a>.</p>
+
+      <p><strong>Climate Change and Biodiversity (25 June 2025)</strong></p>
+      <ul>
+        <li>09:00 – 10:30 CEST, English only</li>
+        <li>16:00 – 17:30 CEST, with Spanish & French translation</li>
+      </ul>
+      <p>The webinar presentation is available in <a href="https://connect.fsc.org/media/pci-revisionwebinarclimate-changebiodiversity2025pdf" target="_blank">English</a>.</p>
+
+      <p><strong>Outcome Orientation (9 July 2025)</strong></p>
+      <ul>
+        <li>09:00 – 10:30 CEST, English only</li>
+        <li>16:00 – 17:30 CEST, with Spanish & French translation</li>
+      </ul>
+      <p>The webinar presentation is available in <a href="https://connect.fsc.org/media/pci-revisionwebinaroutcome-orientation2025pdf" target="_blank">English</a>.</p>
+    </div>
   </div>
 </div>
 
-<!-- ============= 4. DEC 2024 ================== -->
+<!-- December 2024 -->
 <div class="accordion">
   <div class="step">December 2024 <span class="arrow">&#8250;</span></div>
   <div class="items">
-    <p>Webinars introducing the revision process.</p>
+    <div class="section-content">
+      <p><strong>Webinars on the P&amp;C and IGI Revision Process</strong></p>
+      <p>FSC hosted two webinars to introduce its members to the joint revision process of the FSC Principles &amp; Criteria (P&amp;C) and the International Generic Indicators (IGI). The webinar presentation is available in <a href="https://connect.fsc.org/media/webinar06122024enpdf-0" target="_blank">English</a>, <a href="https://connect.fsc.org/es/media/webinar06122024sppdf" target="_blank">Spanish</a>, and <a href="https://connect.fsc.org/fr/media/webinar06122024frpdf" target="_blank">French</a>.</p>
+      <ul>
+        <li>First webinar: December 6, 2024, 09:00–10:30 CET</li>
+        <li>Second webinar: December 6, 2024, 16:30–18:00 CET (with simultaneous translation into Spanish and French)</li>
+      </ul>
+    </div>
   </div>
 </div>
 
-<!-- ============= 5. OCT 2024 ================== -->
+<!-- October 2024 -->
 <div class="accordion">
   <div class="step">October 2024 <span class="arrow">&#8250;</span></div>
   <div class="items">
-    <p>Kick-off of the revision process.</p>
+    <div class="section-content">
+      <p>29 October: Kick off the process.</p>
+    </div>
   </div>
 </div>
 
+<!-- Accordion Script -->
 <script>
-  document.querySelectorAll('.accordion').forEach(acc => {
-    acc.querySelector('.step').addEventListener('click', () => {
-      document.querySelectorAll('.accordion').forEach(other => {
-        if (other !== acc) other.classList.remove('active');
+  const accordions = document.querySelectorAll('.accordion');
+
+  accordions.forEach((accordion) => {
+    const step = accordion.querySelector('.step');
+
+    step.addEventListener('click', () => {
+      accordions.forEach((acc) => {
+        if (acc !== accordion) acc.classList.remove('active');
       });
-      acc.classList.toggle('active');
+      accordion.classList.toggle('active');
     });
   });
 </script>
