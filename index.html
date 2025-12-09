@@ -180,4 +180,40 @@
   <div class="items">
     <div class="section-content">
       <p><strong>Webinars on the P&amp;C and IGI Revision Process</strong></p>
-      <p>FSC hosted two webinars to introduce its members to the joint revision process of the FSC Principles &amp; Criteria (P&amp;C) and the International Generic Indicators (IGI). The webinar presentation is available in <a href="https://connect.fsc.org/media/webinar06122024enpdf-0" target="_blank">English</a>, <a href="https://connect.fsc.org/es/media/webinar06122024sppdf" target="_blank">Spanish</a>, and <a href="https://connect.fsc.org/fr/media/web
+      <p>FSC hosted two webinars to introduce its members to the joint revision process of the FSC Principles &amp; Criteria (P&amp;C) and the International Generic Indicators (IGI). The webinar presentation is available in <a href="https://connect.fsc.org/media/webinar06122024enpdf-0" target="_blank">English</a>, <a href="https://connect.fsc.org/es/media/webinar06122024sppdf" target="_blank">Spanish</a>, and <a href="https://connect.fsc.org/fr/media/webinar06122024frpdf" target="_blank">French</a>.</p>
+      <ul>
+        <li>First webinar: December 6, 2024, 09:00–10:30 CET</li>
+        <li>Second webinar: December 6, 2024, 16:30–18:00 CET (with simultaneous translation into Spanish and French)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- October 2024 -->
+<div class="accordion">
+  <div class="step">October 2024 <span class="arrow">&#8250;</span></div>
+  <div class="items">
+    <div class="section-content">
+      <p>29 October: Kick off the process.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Accordion Script -->
+<script>
+  const accordions = document.querySelectorAll('.accordion');
+
+  accordions.forEach((accordion) => {
+    const step = accordion.querySelector('.step');
+
+    step.addEventListener('click', () => {
+      accordions.forEach((acc) => {
+        if (acc !== accordion) acc.classList.remove('active');
+      });
+      accordion.classList.toggle('active');
+    });
+  });
+</script>
+
+</body>
+</html>
